@@ -1,0 +1,32 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption {
+  padding: 3px 0;
+  border: 1px solid black;
+  border-bottom: none;
+  font-weight: 600;
+}
+
+th, td {
+  padding: 3px;
+  border: 1px solid black;
+}
+
+td {
+  text-align: center;
+}
+
+.weekend {
+  color: red;
+}
