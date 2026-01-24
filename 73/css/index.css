@@ -1,0 +1,144 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.form__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 20px;
+	min-height: 100vh;
+}
+
+h2 {
+	margin: 0;
+}
+
+.form {
+	max-width: 350px;
+	width: 100%;
+	padding: 20px;
+	border: 2px solid black;
+	border-radius: 8px;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.form__title {
+	padding: 0;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.form__name-field {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form__field {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	border-radius: 8px;
+}
+
+.form__text-field {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	border-radius: 8px;
+	resize: vertical;
+	max-height: 200px;
+	min-height: 100px;
+}
+
+input:disabled,
+.form__text-field:disabled {
+	opacity: 0.5;
+}
+
+.form__polisy {
+  display: inline-block;
+	margin-bottom: 10px;
+  padding-left: 22px;
+}
+
+input.checkbox {
+  appearance: none;
+  position: absolute;
+  accent-color: #f37c06;
+  outline: none;
+}
+
+.checkbox::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -22px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox:checked::after {
+  background: url(../images/check-icon.svg) no-repeat center, #f37c06;
+}
+
+.checkbox:disabled::after {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.form__button {
+	width: 100%;
+	padding: 7px 0;
+	background-color: #f37c06;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition:
+		opacity 0.2s ease-in-out,
+		background-color 0.1s ease-in-out;
+}
+
+.form__button:hover {
+	opacity: 0.85;
+}
+
+.form__button:not(:disabled):active {
+	background-color: #f18b25;
+}
+
+.form__button:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+input:focus-visible,
+.form__text-field:focus-visible,
+.form__button:focus-visible,
+.checkbox:focus-visible::after {
+	outline: 2px solid #f37c06;
+	outline-offset: 1px;
+}
+
+input.checkbox {
+  outline: none;
+}
